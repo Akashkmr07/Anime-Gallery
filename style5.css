@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #202125;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 8px;
+    background: rgb(131, 58, 180);
+    background-image: linear-gradient(90deg, blue, pink);
+    font-family: 'Pixelify Sans', cursive;
+}
+
+tr td {
+    padding-right: 10px;
+    border-color: #2A2C39;
+    border-width: 3px;
+}
+
+tr {
+    border: 10px solid black;
+}
+
+tr td img {
+    margin-top: 10px;
+    border-radius: 20px;
+    height: 15rem;
+    width: 10rem;
+    margin-left: 10px;
+}
+
+table {
+    background-color: rgb(128, 128, 128, 0.4);
+    margin-top: 20px;
+}
+
+.p1 {
+    margin-bottom: 10px;
+}
+
+.p2 {
+    margin-left: 20%;
+}
