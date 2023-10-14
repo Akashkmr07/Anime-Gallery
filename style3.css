@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    /* background: linear-gradient(45deg, #87adfe, #ff77cd); */
+    background: url(demon.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    /* place-items: center; */
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image {
+    position: relative;
+    width: 200px;
+    height: 230px;
+    transform-style: preserve-3d;
+    animation: animate 30s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(-360deg);
+    }
+}
+
+.image span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transform: rotateY(calc(var(--i)*45deg))translateZ(370px);
+}
+
+h2 {
+    color: white;
+    position: absolute;
+    font-size: 50px;
+    display: flex;
+    margin-left: 40%;
+}
+
+img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 1.5s;
+}
+
+.image span img:hover {
+    transform: translateY(30px)scale(1.2);
+    cursor: pointer;
+    box-shadow: 0 0 10px black;
+    border-radius: 30px;
+}
+
+@media (max-width: 400px) {
+    body {
+        background-image: url(demon2.jpg);
+    }
+    .image {
+        height: 200px;
+        width: 150px;
+    }
+    .image span img:hover {
+        transform: translateY(20px)scale(1.1);
+    }
+    .image span {
+        transform: rotateY(calc(var(--i)*30deg))translateZ(320px);
+    }
+}
